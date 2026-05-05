@@ -1,0 +1,6 @@
+@tfm_app_vulnerable_HostAddress = http://localhost:5149
+
+GET {{tfm_app_vulnerable_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

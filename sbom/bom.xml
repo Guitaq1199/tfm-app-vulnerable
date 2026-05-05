@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" serialNumber="urn:uuid:4b000634-9723-4587-a1bc-caefb1d30f24" version="1" xmlns="http://cyclonedx.org/schema/bom/1.7">
+  <metadata>
+    <timestamp>2026-05-05T10:23:34.3766073Z</timestamp>
+    <tools>
+      <components>
+        <component type="application">
+          <authors>
+            <author>
+              <name>CycloneDX</name>
+            </author>
+          </authors>
+          <name>CycloneDX module for .NET</name>
+          <version>6.2.0.0</version>
+          <externalReferences>
+            <reference type="website">
+              <url>https://github.com/CycloneDX/cyclonedx-dotnet</url>
+            </reference>
+          </externalReferences>
+        </component>
+      </components>
+    </tools>
+    <component type="application" bom-ref="tfm-app-vulnerable@0.0.0">
+      <name>tfm-app-vulnerable</name>
+      <version>0.0.0</version>
+    </component>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:nuget/Microsoft.AspNetCore.DataProtection@8.0.0">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>Microsoft.AspNetCore.DataProtection</name>
+      <version>8.0.0</version>
+      <description>ASP.NET Core logic to protect and unprotect data, similar to DPAPI.
+
+This package was built from the source code at https://github.com/dotnet/aspnetcore/tree/3f1acb59718cadf111a0a796681e3d3509bb3381</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">2204CD657530E45E8B2CBEE7AE61C24D676B9E54E37358B60C97AF94CBD95F5C3470751D7AF796D8362C7ED6A6AED16CDA3B0CC64154AB6769ED385086FAB79D</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.AspNetCore.DataProtection@8.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnet/aspnetcore</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Microsoft.AspNetCore.OpenApi@10.0.5">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>Microsoft.AspNetCore.OpenApi</name>
+      <version>10.0.5</version>
+      <description>Provides APIs for annotating route handler endpoints in ASP.NET Core with OpenAPI annotations.
+
+This package was built from the source code at https://github.com/dotnet/dotnet/tree/a612c2a1056fe3265387ae3ff7c94eba1505caf9</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">50B8C2E30848474982D81071F6AF9C48D5DB06F3BB2A4E2C4B8802891BC144466EBDD155CED0174DEF7352F8C74D3F7E2BAC26476E31C76922F097C2E4F47B22</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.AspNetCore.OpenApi@10.0.5</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnet/dotnet</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Microsoft.Extensions.ApiDescription.Server@10.0.0">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>Microsoft.Extensions.ApiDescription.Server</name>
+      <version>10.0.0</version>
+      <description>MSBuild tasks and targets for build-time Swagger and OpenApi document generation
+
+This package was built from the source code at https://github.com/dotnet/dotnet/tree/b0f34d51fccc69fd334253924abd8d6853fad7aa</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">25E9DDC666061CCBB34870E47B511EEAB7693CF1C8965E5A6F479650A4539138176DD67591575F15700534A7F67D2E13F2F0E9DC295BEF6B0D2875739D1C5AE7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.Extensions.ApiDescription.Server@10.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://asp.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnet/dotnet</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Microsoft.OpenApi@2.4.1">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>Microsoft.OpenApi</name>
+      <version>2.4.1</version>
+      <description>.NET models with JSON and YAML writers for OpenAPI specification</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5A1D83D105A21A57F427C2C4C8C1D3A9619951B1E63DCC013410B68959877AF64C3CDB528B94C93CE31E40548C589DB5E5988484B6B7AAA1D1412FB9B974FF49</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/Microsoft.OpenApi@2.4.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/Microsoft/OpenAPI.NET</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/Microsoft/OpenAPI.NET</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Newtonsoft.Json@13.0.1">
+      <authors>
+        <author>
+          <name>James Newton-King</name>
+        </author>
+      </authors>
+      <name>Newtonsoft.Json</name>
+      <version>13.0.1</version>
+      <description>Json.NET is a popular high-performance JSON framework for .NET</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">83731B662EAF05379A23F8446EF47BBC111349DD4358B7BD8B51383FE9CF637E2FE62F78CEA52A0D7BDD582DC6FBBB5837D4A7B1D53DCF37A0AE7473E21EE7B1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>Copyright © James Newton-King 2008</copyright>
+      <purl>pkg:nuget/Newtonsoft.Json@13.0.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.newtonsoft.com/json</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/JamesNK/Newtonsoft.Json</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Swashbuckle.AspNetCore@10.1.7">
+      <authors>
+        <author>
+          <name>domaindrivendev</name>
+        </author>
+      </authors>
+      <name>Swashbuckle.AspNetCore</name>
+      <version>10.1.7</version>
+      <description>Swagger tools for documenting APIs built on ASP.NET Core</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">5FF6C2912832D0A86E14C6014FD2919D5E9BAD0367118DB0E24FEB35168A90514D380B0FDF83F753E894F4CC39919AED8AE9B9C8C739236D02F963B8E3C33769</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:nuget/Swashbuckle.AspNetCore@10.1.7</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Swashbuckle.AspNetCore.Swagger@10.1.7">
+      <authors>
+        <author>
+          <name>domaindrivendev</name>
+        </author>
+      </authors>
+      <name>Swashbuckle.AspNetCore.Swagger</name>
+      <version>10.1.7</version>
+      <description>Middleware to expose Swagger JSON endpoints from APIs built on ASP.NET Core</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">94696830E2441351D953B17A36C3FACFD58643CB9AE7D1523F0CA6536649C76936363C4BA080996EEAAE90183DECE4892ECC754C268C665D7B559E3000F31317</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>Copyright (c) 2016-2026 Richard Morris</copyright>
+      <purl>pkg:nuget/Swashbuckle.AspNetCore.Swagger@10.1.7</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerGen@10.1.7">
+      <authors>
+        <author>
+          <name>domaindrivendev</name>
+        </author>
+      </authors>
+      <name>Swashbuckle.AspNetCore.SwaggerGen</name>
+      <version>10.1.7</version>
+      <description>Swagger Generator for APIs built on ASP.NET Core</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">809DE68D886430C2FC558F318DCB946DBACD76D53C8A4BA1C0283B37C8D9DB1A4E9915FDEA440C3E3F173D88B13B605BE2B8FD88A2073DA1FFFF85BB262FBC05</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>Copyright (c) 2016-2026 Richard Morris</copyright>
+      <purl>pkg:nuget/Swashbuckle.AspNetCore.SwaggerGen@10.1.7</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerUI@10.1.7">
+      <authors>
+        <author>
+          <name>domaindrivendev</name>
+        </author>
+      </authors>
+      <name>Swashbuckle.AspNetCore.SwaggerUI</name>
+      <version>10.1.7</version>
+      <description>Middleware to expose an embedded version of the swagger-ui from an ASP.NET Core application</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">A8FF7CFBB69945C8288B9073793B3AA66FE3B6B910B8A2A4C67558E571EA1996E4494DFC3092F56DB0F1B5103C2E37D83FF67B581ADB2AA255CC6F4705F1F6E0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>Copyright (c) 2016-2026 Richard Morris</copyright>
+      <purl>pkg:nuget/Swashbuckle.AspNetCore.SwaggerUI@10.1.7</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/domaindrivendev/Swashbuckle.AspNetCore.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/System.Security.Cryptography.Pkcs@8.0.0">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>System.Security.Cryptography.Pkcs</name>
+      <version>8.0.0</version>
+      <description>Provides support for PKCS and CMS algorithms.
+
+Commonly Used Types:
+System.Security.Cryptography.Pkcs.EnvelopedCms</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CD693D830F8A49762705FAE6FA7505EEED7B81EC6B36624EC23D1670BC3B931241F5501A6CF4EC8FD3F03E877C408912A74AB833FE034C72A131B73BA29D8695</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Pkcs@8.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnet/runtime</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:nuget/System.Security.Cryptography.Xml@8.0.0">
+      <authors>
+        <author>
+          <name>Microsoft</name>
+        </author>
+      </authors>
+      <name>System.Security.Cryptography.Xml</name>
+      <version>8.0.0</version>
+      <description>Provides classes to support the creation and validation of XML digital signatures. The classes in this namespace implement the World Wide Web Consortium Recommendation, "XML-Signature Syntax and Processing", described at http://www.w3.org/TR/xmldsig-core/.
+
+Commonly Used Types:
+System.Security.Cryptography.Xml.CipherData
+System.Security.Cryptography.Xml.CipherReference
+System.Security.Cryptography.Xml.DataObject
+System.Security.Cryptography.Xml.DataReference
+System.Security.Cryptography.Xml.DSAKeyValue
+System.Security.Cryptography.Xml.EncryptedData
+System.Security.Cryptography.Xml.EncryptedKey
+System.Security.Cryptography.Xml.EncryptedReference
+System.Security.Cryptography.Xml.EncryptedType
+System.Security.Cryptography.Xml.EncryptedXml
+System.Security.Cryptography.Xml.EncryptionMethod
+System.Security.Cryptography.Xml.EncryptionProperty
+System.Security.Cryptography.Xml.EncryptionPropertyCollection
+System.Security.Cryptography.Xml.KeyInfo
+System.Security.Cryptography.Xml.KeyInfoClause
+System.Security.Cryptography.Xml.KeyInfoEncryptedKey
+System.Security.Cryptography.Xml.KeyInfoName
+System.Security.Cryptography.Xml.KeyInfoNode
+System.Security.Cryptography.Xml.KeyInfoRetrievalMethod
+System.Security.Cryptography.Xml.KeyInfoX509Data
+System.Security.Cryptography.Xml.KeyReference
+System.Security.Cryptography.Xml.Reference
+System.Security.Cryptography.Xml.ReferenceList
+System.Security.Cryptography.Xml.RSAKeyValue
+System.Security.Cryptography.Xml.Signature
+System.Security.Cryptography.Xml.SignedInfo
+System.Security.Cryptography.Xml.SignedXml
+System.Security.Cryptography.Xml.Transform
+System.Security.Cryptography.Xml.TransformChain
+System.Security.Cryptography.Xml.XmlDecryptionTransform
+System.Security.Cryptography.Xml.XmlDsigBase64Transform
+System.Security.Cryptography.Xml.XmlDsigC14NTransform
+System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform
+System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform
+System.Security.Cryptography.Xml.XmlDsigExcC14NTransform
+System.Security.Cryptography.Xml.XmlDsigExcC14NWithCommentsTransform
+System.Security.Cryptography.Xml.XmlDsigXPathTransform
+System.Security.Cryptography.Xml.XmlDsigXsltTransform
+System.Security.Cryptography.Xml.XmlLicenseTransform</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="SHA-512">CD1928769897DF366E80F0BA77FFA5EEA736657C39A4F3418803B86F5E3AF96CBDA91E3F05735A64A43C4459581A2847D2C0621E175B0C1A4E545260B679895B</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+      <purl>pkg:nuget/System.Security.Cryptography.Xml@8.0.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://dot.net/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/dotnet/runtime</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:nuget/Microsoft.AspNetCore.DataProtection@8.0.0" />
+    <dependency ref="pkg:nuget/Microsoft.AspNetCore.OpenApi@10.0.5">
+      <dependency ref="pkg:nuget/Microsoft.OpenApi@2.4.1" />
+    </dependency>
+    <dependency ref="pkg:nuget/Microsoft.Extensions.ApiDescription.Server@10.0.0" />
+    <dependency ref="pkg:nuget/Microsoft.OpenApi@2.4.1" />
+    <dependency ref="pkg:nuget/Newtonsoft.Json@13.0.1" />
+    <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.Swagger@10.1.7">
+      <dependency ref="pkg:nuget/Microsoft.OpenApi@2.4.1" />
+    </dependency>
+    <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerGen@10.1.7">
+      <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.Swagger@10.1.7" />
+    </dependency>
+    <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerUI@10.1.7" />
+    <dependency ref="pkg:nuget/Swashbuckle.AspNetCore@10.1.7">
+      <dependency ref="pkg:nuget/Microsoft.Extensions.ApiDescription.Server@10.0.0" />
+      <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.Swagger@10.1.7" />
+      <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerGen@10.1.7" />
+      <dependency ref="pkg:nuget/Swashbuckle.AspNetCore.SwaggerUI@10.1.7" />
+    </dependency>
+    <dependency ref="pkg:nuget/System.Security.Cryptography.Pkcs@8.0.0" />
+    <dependency ref="pkg:nuget/System.Security.Cryptography.Xml@8.0.0">
+      <dependency ref="pkg:nuget/System.Security.Cryptography.Pkcs@8.0.0" />
+    </dependency>
+    <dependency ref="tfm-app-vulnerable@0.0.0">
+      <dependency ref="pkg:nuget/Microsoft.AspNetCore.DataProtection@8.0.0" />
+      <dependency ref="pkg:nuget/Microsoft.AspNetCore.OpenApi@10.0.5" />
+      <dependency ref="pkg:nuget/Newtonsoft.Json@13.0.1" />
+      <dependency ref="pkg:nuget/Swashbuckle.AspNetCore@10.1.7" />
+      <dependency ref="pkg:nuget/System.Security.Cryptography.Xml@8.0.0" />
+    </dependency>
+  </dependencies>
+</bom>

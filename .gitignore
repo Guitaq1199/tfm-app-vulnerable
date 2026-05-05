@@ -1,0 +1,113 @@
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+## Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## MonoDevelop
+*.userprefs
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+*.nuget.props
+*.nuget.targets
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Entity Framework
+*.mdf
+*.ldf
+
+## IIS Express
+/.vs/
+/IISExpress/
+
+## Azure
+*.azurePubxml
+*.publishsettings
+
+## Logs
+*.log
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## DotCover
+*.dotCover
+
+## Test Results
+TestResults/
+*.trx
+
+## Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+## Publish output
+publish/
+
+## Blazor / WebAssembly
+wwwroot/dist/
+wwwroot/build/
+
+## Node (si usas frontend dentro del proyecto)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## Secrets (MUY IMPORTANTE)
+appsettings.Development.json
+secrets.json
+*.pfx
+
+## JetBrains Rider
+.idea/
+
+## Backup files
+*.bak
+*.tmp
+*.temp
+
+## SQL Server
+*.mdf
+*.ldf
+
+## Others
+*.dbmdl
+*.jfm
+*.pdb
+*.cache
+*.aps
+*.ncb
+*.opendb
+*.VC.db
