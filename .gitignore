@@ -111,3 +111,5 @@ secrets.json
 *.ncb
 *.opendb
 *.VC.db
+sbom/
+bom.json
