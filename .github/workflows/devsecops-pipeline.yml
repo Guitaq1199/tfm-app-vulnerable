@@ -25,6 +25,11 @@ jobs:
     - name: Build
       run: dotnet build ./tfm-app-vulnerable.csproj --configuration Release --no-restore
     
+    - name: Install CycloneDX .NET Tool
+      run: | 
+        dotnet tool install --global CycloneDX
+        echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+    
     - name: Generate SBOM with CycloneDX
       run: dotnet cyclonedx ./tfm-app-vulnerable.csproj --json --output ./sbom
     
