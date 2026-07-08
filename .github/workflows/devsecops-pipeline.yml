@@ -57,7 +57,15 @@ jobs:
         DTRAK_API_KEY: ${{ secrets.DTRAK_API_KEY }}
       run: |
         BOM_B64=$(base64 -w 0 ./sbom/bom.json)
-        curl -X POST "$DTRAK_URL/api/v1/bom" \
+        HTTP_CODE=$(curl -s -o response.json -w "%{http_code}" -X POST "$DTRAK_URL/api/v1/bom" \
           -H "X-Api-Key: $DTRAK_API_KEY" \
           -H "Content-Type: application/json" \
-          -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$BOM_B64\"}"
+          -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$BOM_B64\"}")
+        echo "HTTP status code: $HTTP_CODE"
+        echo "--- Response body ---"
+        cat response.json
+        echo ""
+        if [ "$HTTP_CODE" -ne 200 ]; then
+          echo "ERROR: la subida falló"
+          exit 1
+        fi
