@@ -53,11 +53,11 @@ jobs:
 
     - name: Upload SBOM to Dependency-Track
       env:
-        DTRACK_URL: ${{ secrets.DTRACK_URL }}
-        DTRACK_API_KEY: ${{ secrets.DTRACK_API_KEY }}
+        DTRACK_URL: ${{ secrets.DTRAK_URL }}
+        DTRACK_API_KEY: ${{ secrets.DTRAK_API_KEY }}
       run: |
         BOM_B64=$(base64 -w 0 ./sbom/bom.json)
-        curl -X POST "$DTRACK_URL/api/v1/bom" \
-          -H "X-Api-Key: $DTRACK_API_KEY" \
+        curl -X POST "$DTRAK_URL/api/v1/bom" \
+          -H "X-Api-Key: $DTRAK_API_KEY" \
           -H "Content-Type: application/json" \
           -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$BOM_B64\"}"
