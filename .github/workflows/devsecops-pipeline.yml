@@ -18,23 +18,46 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.0.x'
-    
-    - name: Restore dependecies
+
+    - name: Restore dependencies
       run: dotnet restore ./tfm-app-vulnerable.csproj --locked-mode
 
     - name: Build
       run: dotnet build ./tfm-app-vulnerable.csproj --configuration Release --no-restore
-    
+
     - name: Install CycloneDX .NET Tool
-      run: | 
+      run: |
         dotnet tool install --global CycloneDX
         echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-    
+
     - name: Generate SBOM with CycloneDX
       run: dotnet CycloneDX ./tfm-app-vulnerable.csproj --output-format json --output ./sbom
-    
+
     - name: Upload SBOM artifact
       uses: actions/upload-artifact@v4
       with:
         name: cyclonedx-sbom
         path: ./sbom/bom.json
+
+    - name: Install Grype
+      run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+
+    - name: Scan SBOM with Grype
+      run: grype sbom:./sbom/bom.json -o json --file grype-results.json
+
+    - name: Upload Grype results
+      uses: actions/upload-artifact@v4
+      with:
+        name: grype-results
+        path: grype-results.json
+
+    - name: Upload SBOM to Dependency-Track
+      env:
+        DTRACK_URL: ${{ secrets.DTRACK_URL }}
+        DTRACK_API_KEY: ${{ secrets.DTRACK_API_KEY }}
+      run: |
+        BOM_B64=$(base64 -w 0 ./sbom/bom.json)
+        curl -X POST "$DTRACK_URL/api/v1/bom" \
+          -H "X-Api-Key: $DTRACK_API_KEY" \
+          -H "Content-Type: application/json" \
+          -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$BOM_B64\"}"
