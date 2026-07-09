@@ -57,7 +57,7 @@ jobs:
         DTRAK_API_KEY: ${{ secrets.DTRAK_API_KEY }}
       run: |
         BOM_B64=$(base64 -w 0 ./sbom/bom.json)
-        HTTP_CODE=$(curl -s -o response.json -w "%{http_code}" -X POST "$DTRAK_URL/api/v1/bom" \
+        HTTP_CODE=$(curl -s -o response.json -w "%{http_code}" -X PUT "$DTRAK_URL/api/v1/bom" \
           -H "X-Api-Key: $DTRAK_API_KEY" \
           -H "Content-Type: application/json" \
           -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$BOM_B64\"}")
