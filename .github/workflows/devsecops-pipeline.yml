@@ -43,7 +43,11 @@ jobs:
       run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
 
     - name: Scan SBOM with Grype
-      run: grype sbom:./sbom/bom.json -o json --file grype-results.json
+      id: grype_scan
+      continue-on-error: true
+      run: |
+        grype sbom:./sbom/bom.json -o json --file grype-results.json
+        grype sbom:./sbom/bom.json --fail-on high
 
     - name: Upload Grype results
       uses: actions/upload-artifact@v4
