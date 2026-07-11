@@ -79,14 +79,14 @@ jobs:
         ATTEMPT=0
         while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
         STATUS=$(curl -sf -H "X-Api-Key: $DTRAK_API_KEY" \
-            "$DTRAK_URL/api/v1/bom/token/$TOKEN/processing" | jq -r '.processing')
+            "$DTRAK_URL/api/v1/bom/token/$TOKEN" | jq -r '.processing')
         echo "Intento $ATTEMPT: processing=$STATUS"
         if [ "$STATUS" = "false" ]; then
             echo "Procesamiento completado."
             break
         fi
         ATTEMPT=$((ATTEMPT+1))
-        sleep 5
+        sleep 20
         done
         if [ "$STATUS" = "true" ]; then
         echo "Timeout esperando el procesamiento de Dependency-Track"
