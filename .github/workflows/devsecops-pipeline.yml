@@ -61,10 +61,12 @@ jobs:
         DTRAK_URL: ${{ secrets.DTRAK_URL }}
         DTRAK_API_KEY: ${{ secrets.DTRAK_API_KEY }}
       run: |
-        RESPONSE=$(curl -sf -X PUT "$DTRAK_URL/api/v1/bom" \
-        -H "X-Api-Key: $DTRAK_API_KEY" \
-        -H "Content-Type: application/json" \
-        -d "{\"autoCreate\": true, \"projectName\": \"tfm-app-vulnerable\", \"projectVersion\": \"1.0.0\", \"bom\": \"$(base64 -w 0 ./sbom/bom.json)\"}")
+        RESPONSE=$(curl -sf -X POST "$DTRAK_URL/api/v1/bom" \
+          -H "X-Api-Key: $DTRAK_API_KEY" \
+          -F "autoCreate=true" \
+          -F "projectName=tfm-app-vulnerable" \
+          -F "projectVersion=1.0.0" \
+          -F "bom=@./sbom/bom.json")
         echo "Response: $RESPONSE"
         TOKEN=$(echo "$RESPONSE" | jq -r '.token')
         echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
